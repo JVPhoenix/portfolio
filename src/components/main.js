@@ -7,7 +7,7 @@ export default function MainPage(props) {
         <main className={props.darkMode ? "dark" : ""}>
             <div 
                 className="main--div"
-                id={props.slider ? "slider" : "slider#back"}
+                id={props.slider ? "slider" : ""}
             >
                 <div className="main--firstColumn">
                     <h1 className="main--titles">About-me</h1>
@@ -81,7 +81,8 @@ export default function MainPage(props) {
                         <li>
                             Knowledge in Graphic Design features, that helps in many areas.
                             <p className="space"/>
-                            Figma Experience. - Most of the courses that i made used Figma as a model.
+                            Experience with Figma- Most of the courses that i made used Figma as base
+                            graphic editor, providing the projects models.
                         </li>
                         <li>
                             Fluent Portuguese - Native Language.
