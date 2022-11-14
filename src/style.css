@@ -1,4 +1,10 @@
 /* GENERAL CONFIGS */
+:root{
+    --color_lightblue: #61DAFB;
+    --color_darkblue: #0f48dc;
+    --color_backgroundWite: #ffffff;
+    --color_secondaryBlack: #2B283A;
+}
 * {
     box-sizing: border-box;
 }
@@ -13,6 +19,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+}
+.display_none{
+    display: none;
 }
 /* MOBILE CONFIGS */
 @media (max-width: 1280px) {
@@ -62,7 +71,7 @@ body {
 nav {
     position: relative;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--color_backgroundWhite);
     padding: 10px 20px;
     height: 60px;
     min-width: 200px;
@@ -74,7 +83,7 @@ nav {
 }
 nav.dark {
     background-color: #21222A;
-    color: #61DAFB;
+    color: var(--color_lightblue);
 }
 .nav--containner{
     position: inherit;
@@ -83,13 +92,8 @@ nav.dark {
     justify-content: space-between;
     
     top: -90px;
-    -webkit-animation: nav--slider 0.8s forwards;
-    -webkit-animation-delay: 0.2s;
     animation: nav--slider 0.8s forwards;
     animation-delay: 0.2s;
-}
-@-webkit-keyframes nav--slider{
-    100% { top: 0; }
 }
 @keyframes nav--slider {
     100% { top: 0; }
@@ -131,7 +135,7 @@ nav img.dark, img.darkbtn{
     transition: .3s;
 }
 div.light:hover{
-    color: #0f48dc;
+    color: var(--color_darkBlue);
     transition: .3s;
 }
 div.light:hover img.light{
@@ -153,7 +157,7 @@ div.light:hover img.light{
 .toggler--slider {
     width: 25px;
     height: 13px;
-    background-color: #2B283A;
+    background-color: var(--color_secondaryBlack);
     border-radius: 2rem;
     margin-inline: 7px;
     cursor: pointer;
@@ -181,7 +185,7 @@ nav.dark .toggler--slider--circle {
     background-color: black;
 }
 .toggler--light {
-    color: #2B283A;
+    color: var(--color_secondaryBlack);
 }
 nav.dark .toggler--light {
     color: #918E9B;
@@ -190,7 +194,7 @@ nav.dark .toggler--light {
     color: #D5D4D8;
 }
 nav.dark .toggler-dark {
-    color: #FFFFFF;
+    color: var(--color_backgroundWhite);
 }
 
 /* MAIN styles */
@@ -203,7 +207,7 @@ main {
     background-size: clamp(10vw, 30vw, 480px) auto;
     flex: 1 1 auto;
     background-color: white;
-    color: #2B283A;
+    color: var(--color_secondaryBlack);
     transition: .5s;
 }
 main.dark {
@@ -218,7 +222,6 @@ main.dark {
     justify-content: space-evenly;
     left: 0;
     height: fit-content;
-    visibility: hidden;
     transform: translateX(0px);
     transition: 1s;
 }
@@ -293,25 +296,23 @@ ul > li {
 }
 ul > li::marker {
     font-size: 1.4rem;
-    color: #0f48dc;
+    color: var(--color_darkBlue);
 }
 ul.dark > li::marker{
-    color: #61DAFB;
+    color: var(--color_lightblue);
 }
 .space {
     margin-bottom: 8px;
 }
 
-/* FADE-IN THE MAIN COLUMNS */
+/* FADE-IN WHEN CALLED*/
 @keyframes fadeIn {
     from { 
         opacity: 0;
-        visibility: hidden;
         display: none;
     }
     to { 
         opacity: 1;
-        visibility: visible;
         display: flex;
     }
 }
@@ -323,40 +324,49 @@ ul.dark > li::marker{
 }
 
 /* CONTACTS ALTERNATIVE PAGE */
-.contacts--page {
-    display: flex;
-    opacity: 0;
+#contacts{
     position: absolute;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    gap: 30px;
 
     top: 50%;
     left: 50%;
+    margin-right: -50%;
     transform: translate(-50%, -50%);
-    transition: .20s;
 }
-.contacts--page h1:hover{
-    color: #61DAFB;
+#contacts h1:hover{
+    color: var(--color_lightblue)
 }
+
+.fadeInContacts{
+    animation: 2s fadeIn;
+    animation-fill-mode: forwards;
+}
+.fadeOutContacts{
+    animation: 0.5s fadeOutContacts;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOutContacts {
+    0% { 
+        display: flex;
+        opacity: 1;
+    }
+    100%{
+        display: none;
+        opacity: 0;
+    }
+}
+
 #unlinked--contacts{
     font-size: 30px;
     cursor: pointer;
     user-select: none;
+    padding: 10px;
 }
-.display_none{
-    display: none;
-}
-#unlinked--contacts:hover .display_none{
+#unlinked--contacts:hover::after{
+    content: "Click to copy";
     display: block;
+    justify-content: center;
     text-align: center;
     font-size: 15px;
-    margin: 0;
-}
-
-/* FADE-IN THE CONTACTS PAGE */
-#fadeInContacts{
-    opacity: 1;
-    transition: 3s;
 }

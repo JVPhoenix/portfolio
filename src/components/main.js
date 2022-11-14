@@ -15,12 +15,12 @@ export default function MainPage(props) {
                         <img 
                             className="main--first-img"
                             src={ProfileImg1}
-                            alt="JV looking to the camera"
+                            alt="The page owner looking to the camera with laboratory coat"
                         />
                         <img 
                             className="main--first-img"
                             src={ProfileImg2}
-                            alt="JV looking to the camera with laboratory coat"
+                            alt="The page owner looking to the camera"
                         />
                     </div>
 
@@ -81,7 +81,7 @@ export default function MainPage(props) {
                         <li>
                             Knowledge in Graphic Design features, that helps in many areas.
                             <p className="space"/>
-                            Experience with Figma- Most of the courses that i made used Figma as base
+                            Experience with Figma - Most of the courses that i made used Figma as base
                             graphic editor, providing the projects models.
                         </li>
                         <li>
@@ -96,15 +96,16 @@ export default function MainPage(props) {
                 </div>
             </div>
             <div
-                className="contacts--page"
-                id={props.slider ? "fadeInContacts" : ""}
+                className={props.animation}
+                id="contacts"
             >
                 <h1 onClick={
                     () => {
                         navigator.clipboard.writeText("JVP#9352")
-                    }} id="unlinked--contacts">
-                    Discord: JVP#9352
-                    <p className="display_none">click to copy</p>
+                    }} 
+                    id="unlinked--contacts"
+                >
+                    Message-me on Discord: JVP#9352
                 </h1>
 
                 <h1 onClick={
@@ -114,7 +115,6 @@ export default function MainPage(props) {
                     id="unlinked--contacts"
                 >
                     Or just email-me in: jvitorcocal@hotmail.com
-                    <p className="display_none">click to copy</p>
                 </h1>
             </div>
         </main>

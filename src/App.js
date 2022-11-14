@@ -11,8 +11,15 @@ export default function App() {
 
     // SLIDE EFFECT FUNCTION
     const [slider, setSlider] = useState(false)
+    const [animation, setAnimation] = useState("display_none")
     function toggleSlider(){
         setSlider(prevMode => !prevMode)
+
+        if(!slider){
+            setAnimation("fadeInContacts")
+        }else{
+            setAnimation("fadeOutContacts")
+        }
     }
 
     return (
@@ -28,6 +35,7 @@ export default function App() {
             <MainPage
                 slider = {slider}
                 darkMode = {darkMode}
+                animation = {animation}
             />
         </div>
 
