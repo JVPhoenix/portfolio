@@ -309,10 +309,12 @@ ul.dark > li::marker{
 @keyframes fadeIn {
     from { 
         opacity: 0;
+        visibility: hidden;
         display: none;
     }
     to { 
         opacity: 1;
+        visibility: visible;
         display: flex;
     }
 }
@@ -344,16 +346,17 @@ ul.dark > li::marker{
 }
 .fadeOutContacts{
     animation: 0.5s fadeOutContacts;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 @keyframes fadeOutContacts {
-    0% { 
-        display: flex;
+    from {
         opacity: 1;
+        display: flex;
     }
-    100%{
-        display: none;
+    to{
         opacity: 0;
+        display: none;
     }
 }
 

@@ -12,6 +12,7 @@ export default function App() {
     // SLIDE EFFECT FUNCTION
     const [slider, setSlider] = useState(false)
     const [animation, setAnimation] = useState("display_none")
+
     function toggleSlider(){
         setSlider(prevMode => !prevMode)
 
@@ -19,6 +20,9 @@ export default function App() {
             setAnimation("fadeInContacts")
         }else{
             setAnimation("fadeOutContacts")
+            setTimeout(() => {
+                setAnimation("display_none")        
+            }, 1000);
         }
     }
 
