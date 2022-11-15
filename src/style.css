@@ -120,6 +120,9 @@ nav.dark {
     filter: brightness(200%);
     transition: .5s;
 }
+.nav--infos div.light:hover{
+    color: var(--color_darkblue);
+}
 #nav--menuBtn{
     display: none;
 }
