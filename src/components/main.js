@@ -26,16 +26,19 @@ export default function MainPage(props) {
 
                     <div className="main--about-me">
                         <p> 
-                            Hello! My name is João Vitor, or just JV. I'm from brazil, graduated in TI (2016-2017) and in Chemistry Degree
-                            on IFPI (2018-2022) with some internships as a full professor and assistant.
+                            Hello! My name is João Vitor and i'm a lover of technologies, 
+                            innovations and now, programming. I started in the technological area with the assembly 
+                            and maintenance of computers and later graphic development, always focusing on punctuality, 
+                            communication, and customer experience and satisfaction.
                         </p>
                         <p>
-                            Also, worked as a researcher in the laboratory of Biology of my campus, in some health areas, for example, 
-                            water and soil analysis, and interactions and effects of pesticides in humans and other living beings.
+                            Currently I have studied and practiced in the area of Web Design, where I created my own portfolio (this), 
+                            focusing mainly on Front-End in line with my graphic design knowledge, and with that, 
+                            i was able to learn HTML5, CSS3, JavaScript, React.JS, and a bit of TypeScript.
                         </p>
                         <p>
-                            Now, i want to get into the programming area, as a developer, aiming to work in other regions
-                            of my country, via home-office or in person.
+                            I'am graduated in T.I. (2016-2017) and in Chemistry Degree (2018-2022), 
+                            and now i want to get into the programming area, as a developer.
                         </p>
                     </div>
                     
@@ -50,21 +53,25 @@ export default function MainPage(props) {
                             Also worked as a freelancer performing graphic arts using Photoshop
                             and editing videos in Vegas Pro.
                         </li>
-                        <li>In my College Degree, i made 4 internships, as well as 3 PIBICs (Scientific Initiations),
-                            where i worked with several areas within the laboratory.
+                        <li>In my College Degree, i made 4 internships and worked as a researcher in the laboratory of Biology 
+                            of my campus, in some health areas, for example, water and soil analysis, and 
+                            interactions and effects of pesticides in humans and other living beings.
                             <p className="space"/>
-                            I also worked in a 6 months TI internship.
+                            I also worked in a 6 months T.I. internship.
                         </li>
                         <li>Today, I work as an Administrative Auxiliar in a land sales company,
                             doing the legal documentation, management of social media and 
                             all the others office bureaucracy.
                         </li>
                         <li>
-                            In the free time, i deepen my programming habilities, fucused on the FrontEnd area, learning
-                            through courses.
-                            <p className="space"/>
-                            For practice, i made solo projects like this, made with my actual 
-                            understanding of HTML5, CSS3, JavaScript and React.JS.
+                            In the free time, i made solo projects like this portfolio, and 
+                            the <span onClick={() => window.open(
+                                    'https://www.instagram.com/loteamentor.martins/',
+                                    '_blank',
+                                    'noopener, noreferrer'
+                                    )
+                                }> website of my actual job</span> 
+                            , all with my actual understanding of HTML5, CSS3, JavaScript and React.JS.
                         </li>
                     </ul>
                 </div>

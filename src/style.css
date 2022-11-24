@@ -274,7 +274,10 @@ main.dark {
     animation: 4s fadeIn;
     animation-fill-mode: forwards;
 }
-
+.main--secondColumn span{
+    cursor: pointer;
+    text-decoration: underline;
+}
 /* MAIN THIRD COLUMN */
 .main--thirdColumn {
     min-width: 400px;
