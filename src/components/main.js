@@ -66,7 +66,7 @@ export default function MainPage(props) {
                         <li>
                             In the free time, i made solo projects like this portfolio, and 
                             the <span onClick={() => window.open(
-                                    'https://loteamentormatins.netlify.app/',
+                                    'https://loteamentormartins.netlify.app/',
                                     '_blank',
                                     'noopener, noreferrer'
                                     )
