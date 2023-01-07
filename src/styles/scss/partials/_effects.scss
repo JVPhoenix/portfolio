@@ -1,0 +1,12 @@
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    to { 
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+    }
+}

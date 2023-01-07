@@ -1,0 +1,40 @@
+@import "./partials/variables.scss";
+
+/* PROJECTS ALTERNATIVE PAGE */
+#projects{
+    color: $color-white;
+    position: absolute;
+    text-align: center;
+
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    h1{
+        font-size: 30px;
+        cursor: pointer;
+        user-select: none;
+        padding: 10px;
+    }
+}
+
+.fadeInProjects{
+    animation: 2s fadeIn;
+    animation-fill-mode: forwards;
+}
+.fadeOutProjects{
+    animation: 0.5s fadeOutProjects;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOutProjects {
+    from {
+        opacity: 1;
+        display: flex;
+    }
+    to{
+        opacity: 0;
+        display: none;
+    }
+}
