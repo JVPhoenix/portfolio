@@ -11,11 +11,33 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     
-    h1{
-        font-size: 30px;
-        cursor: pointer;
-        user-select: none;
-        padding: 10px;
+    div{
+        display: flex;
+
+        div{
+            margin: 10px 5px;
+            width: 480px;
+            height: 270px;
+            font-size: 30px;
+            cursor: pointer;
+            user-select: none;
+            border: 1px solid $color-lightblue;
+            border-radius: 20px;
+            transition: 0.2s;
+        }
+
+        .first-project{
+            background-image: url("https://i.imgur.com/oOizRHS.png");
+            &:hover{
+                background-image: url("https://media.giphy.com/media/1A6ZZIkV5ofAgDRW3z/giphy.gif");
+            }
+        }
+        .second-project{
+            background-image: url("https://i.imgur.com/xIigOqG.png");
+            &:hover{
+                background-image: url("https://media.giphy.com/media/W2cBXLqaNrzrheDaU6/giphy.gif");
+            }
+        }
     }
 }
 
@@ -28,10 +50,10 @@
     animation-direction: normal;
     animation-fill-mode: forwards;
 }
+
 @keyframes fadeOutProjects {
     from {
         opacity: 1;
-        display: flex;
     }
     to{
         opacity: 0;

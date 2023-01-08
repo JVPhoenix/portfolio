@@ -378,14 +378,34 @@ main.dark {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-#projects h1 {
+#projects div {
+  display: flex;
+}
+#projects div div {
+  margin: 10px 5px;
+  width: 480px;
+  height: 270px;
   font-size: 30px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  padding: 10px;
+  border: 1px solid #61DAFB;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+#projects div .first-project {
+  background-image: url("https://i.imgur.com/oOizRHS.png");
+}
+#projects div .first-project:hover {
+  background-image: url("https://media.giphy.com/media/1A6ZZIkV5ofAgDRW3z/giphy.gif");
+}
+#projects div .second-project {
+  background-image: url("https://i.imgur.com/xIigOqG.png");
+}
+#projects div .second-project:hover {
+  background-image: url("https://media.giphy.com/media/W2cBXLqaNrzrheDaU6/giphy.gif");
 }
 
 .fadeInProjects {
@@ -407,7 +427,6 @@ main.dark {
 @-webkit-keyframes fadeOutProjects {
   from {
     opacity: 1;
-    display: flex;
   }
   to {
     opacity: 0;
@@ -418,7 +437,6 @@ main.dark {
 @keyframes fadeOutProjects {
   from {
     opacity: 1;
-    display: flex;
   }
   to {
     opacity: 0;
@@ -465,6 +483,9 @@ main.dark {
     margin-right: 0px !important;
     margin-bottom: 20px;
   }
+  #projects div {
+    display: block;
+  }
 }
 /* GENERAL CONFIGS */
 * {
@@ -492,4 +513,8 @@ body {
 
 .black {
   color: #282D35;
+}
+
+.inline {
+  display: inline;
 }

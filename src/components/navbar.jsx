@@ -85,6 +85,18 @@ export default function Navbar(props) {
                             <h3>GitHub</h3>
                         </div>
 
+                        <div
+                            className={props.darkMode ? "dark" : "light"}
+                            onClick={props.toggleProjects}
+                        >
+                            <img
+                            className={props.darkMode ? "dark" : "light"}
+                            src={props.animationProjects === "fadeInProjects" ? homepageIcon : projectsIcon}
+                            alt="ProjectsCog_Logo"
+                            />
+                            <h3> {props.animationProjects === "fadeInProjects" ? "Back to Home Page" : "Projects"} </h3>
+                        </div>
+
                         <div 
                             className={props.darkMode ? "dark" : "light"}
                             onClick={props.toggleContacts}
@@ -97,17 +109,6 @@ export default function Navbar(props) {
                             <h3>{props.animationContacts === "fadeInContacts" ? "Back to Home Page" : "Contact-me"}</h3>
                         </div>
 
-                        <div
-                            className={props.darkMode ? "dark" : "light"}
-                            onClick={props.toggleProjects}
-                        >
-                            <img
-                            className={props.darkMode ? "dark" : "light"}
-                            src={props.animationProjects === "fadeInProjects" ? homepageIcon : projectsIcon}
-                            alt="GitHub_Logo"
-                            />
-                            <h3> {props.animationProjects === "fadeInProjects" ? "Back to Home Page" : "Projects"} </h3>
-                        </div>
                     </div>
                 </div>
 

@@ -5,7 +5,8 @@ import ProfileImg2 from "../img/profileimg_2.jpg"
 export default function MainPage(props) {
     return (
         <main className={props.darkMode ? "dark" : ""}>
-            <div 
+            <div
+                style={{display: props.MainDisplay ? "" : "none"}}
                 className="main--div"
                 id={props.slider ? "slider" : ""}
             >
@@ -45,11 +46,11 @@ export default function MainPage(props) {
                 <div className="main--secondColumn">
                     <h1 className="main--titles">Professional Experience</h1>
                     <ul className={props.darkMode ? "dark" : ""}>
-                        <li>Graphic Designer in a local print shop for a year, making new ideas and concepts using
+                        <li>Started as a Graphic Designer in a local print shop for a year, making new ideas and concepts using
                             Adobe Photoshop.
                             <p className="space"/>
-                            Also worked as a freelancer performing graphic arts using Photoshop
-                            and editing videos in Vegas Pro.
+                            Later, worked as a freelancer doing the assembly and maintence of PCs, performing graphic arts 
+                            using Photoshop and editing videos in Vegas Pro, always focusing on the customer satisfaction.
                         </li>
                         <li>In my College Degree, i made 4 internships and worked as a researcher in the laboratory of Biology 
                             of my campus, in some health areas, for example, water and soil analysis, and 
@@ -62,14 +63,11 @@ export default function MainPage(props) {
                             all the others office bureaucracy.
                         </li>
                         <li>
-                            I made solo projects like this portfolio, and 
-                            the <span onClick={() => window.open(
-                                    'https://loteamentormartins.netlify.app/',
-                                    '_blank',
-                                    'noopener, noreferrer'
-                                    )
-                                }> website of my actual job</span> 
-                            , all with my actual understanding of HTML5, CSS3 with SASS, JavaScript, React.JS and Typescript.
+                            Also made solo programming projects, using the following technologies:
+                            <ul>
+                                <li> HTML5 and CSS3 / SASS </li>
+                                <li> JavaScript, ReactJS and TypeScript </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

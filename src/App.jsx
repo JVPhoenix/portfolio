@@ -13,7 +13,17 @@ export default function App() {
 
     // SLIDE EFFECTS
     const [slider, setSlider] = useState(false)
-    const invert = () => setSlider(prevMode => !prevMode)
+    const [MainDisplay, setMainDisplay] = useState(true)
+    const invert = () => {
+        setSlider(prevMode => !prevMode)
+        if (!slider) {
+            setTimeout(() => {
+                setMainDisplay(prevMode => !prevMode)
+            }, 1000);
+        } else {
+            setMainDisplay(prevMode => !prevMode)
+        }
+    }
 
     const [animationContacts, setAnimationContacts] = useState("display_none")
     const [animationProjects, setAnimationProjects] = useState("display_none")
@@ -87,6 +97,7 @@ export default function App() {
             <MainPage
                 slider = {slider}
                 darkMode = {darkMode}
+                MainDisplay = {MainDisplay}
                 animationContacts = {animationContacts}
             />
             <Contacts

@@ -20,9 +20,12 @@ body {
     flex-direction: column;
     height: 100vh;
 }
-.display_none{
+.display_none {
     display: none;
 }
-.black{
+.black {
     color: $color-black;
+}
+.inline {
+    display: inline;
 }
