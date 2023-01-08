@@ -24,20 +24,23 @@ export default function MainPage(props) {
                     </div>
 
                     <div className="main--about-me">
-                        <p> 
+                        <p className="space"> 
                             Hello! My name is João Vitor and i'm a lover of technologies, 
-                            innovations and now, programming. I started in the technological area with the assembly 
+                            innovations and programming.
+                        </p>
+                        <p className="space"> 
+                            I started in the technological area with the assembly 
                             and maintenance of computers and later graphic development, always focusing on punctuality, 
                             communication, and customer experience and satisfaction.
                         </p>
-                        <p>
-                            Currently I have studied and practiced in the area of Web Design, where I created my own portfolio (this), 
-                            focusing mainly on Front-End in line with my graphic design knowledge, and with that, 
-                            i was able to learn HTML5, CSS3, JavaScript, React.JS, and a bit of TypeScript.
+                        <p className="space">
+                            Currently I have studied and practiced focusing mainly in Front-End Develop,
+                            aling with my graphic design knowledge, and with that, i was able to produce some Projects 
+                            and learn HTML5, CSS3 / SASS, JavaScript, React.JS, and a bit of TypeScript.
                         </p>
                         <p>
-                            I'am graduated in T.I. (2016-2017) and in Chemistry Degree (2018-2022), 
-                            and now i want to get into the programming area, as a developer.
+                            I have a Technical Course in T.I. (2016-2017) and i'm graduated in Chemistry Degree (2018-2022), 
+                            and now i want to get into the programming area, as a Developer.
                         </p>
                     </div>
                     
