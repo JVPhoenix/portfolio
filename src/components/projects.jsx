@@ -6,41 +6,48 @@ export default function Projects(props){
         id="projects"
         className={props.animationProjects}
         >
-            <h1> Projecs that i developed </h1>
+            <h1 className={props.darkMode ? "" : "black"}> 
+                Projecs that i developed 
+            </h1>
             <div>
                 <div
                     className="first-project"
-                    onClick={() => window.open(
-                        'https://loteamentormartins.netlify.app/',
-                                    '_blank',
-                                    'noopener, noreferrer'
-                                    )
+                    onClick={() => 
+                        window.open(
+                            'https://jvphoenixportfolio.netlify.app/',
+                            '_blank',
+                            'noopener, noreferrer'
+                        )
                     }
-                    alt="First Project gif"
+                    alt="First Project"
                 />
 
                 <div
                     className="second-project"
-                    onClick={() => window.open(
-                                    'https://loteamentormartins.netlify.app/',
-                                    '_blank',
-                                    'noopener, noreferrer'
-                                    )
+                    onClick={() => 
+                        window.open(
+                            'https://loteamentormartins.netlify.app/',
+                            '_blank',
+                            'noopener, noreferrer'
+                        )
                     }
-                    alt="Second Project gif"
+                    alt="Second Project"
                 />
                 {/* <div
                     className="third-project"
-                    onClick={() => window.open(
-                                    'https://loteamentormartins.netlify.app/',
-                                    '_blank',
-                                    'noopener, noreferrer'
-                                    )
+                    onClick={() => 
+                        window.open(
+                            'https://loteamentormartins.netlify.app/',
+                            '_blank',
+                            'noopener, noreferrer'
+                            )
                     }
-                    alt="third Project gif"
+                    alt="Third Project"
                 /> */}
             </div>
-            <p> All the projects source-codes are available on my GitHub.</p>
+            <p className={props.darkMode ? "" : "black"}> 
+                All the projects source-codes are available on my GitHub.
+            </p>
         </div>
     )
 }

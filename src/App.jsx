@@ -106,6 +106,7 @@ export default function App() {
             />
             <Projects
                 animationProjects = {animationProjects}
+                darkMode = {darkMode}
             />
         </div>
 
