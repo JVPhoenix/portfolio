@@ -1,35 +1,42 @@
 import { twMerge } from "tailwind-merge";
 import { EmailIcon, GitHubIcon, LinkedinIcon, ReactIcon } from "./icons";
 import { Dispatch, SetStateAction } from "react";
+import Link from "next/link";
+import { useTheme } from "@/context/theme";
+import { PageSelected } from "@/types";
 
 interface PropsNavbarInterface {
   className?: string;
-  switchMode: boolean;
-  setSwitchMode: Dispatch<SetStateAction<boolean>>;
+  page?: number;
 }
 
 export default function Navbar(props: PropsNavbarInterface) {
+  const { theme, setTheme } = useTheme();
   return (
     <div
       className={twMerge(
         "flex bg-black2 justify-center px-5 w-full h-14",
         "text-lightblue items-center font-bold text-lg shadow-lg",
-        props.switchMode && "bg-transparent text-black"
+        theme && "bg-transparent text-black"
       )}
     >
       <div className={twMerge("flex w-full justify-between", props.className)}>
-        <div className="flex gap-1 select-none items-center">
+        <Link
+          href="/"
+          className={twMerge(
+            "flex gap-1 whitespace-nowrap select-none cursor-default",
+            props.page !== PageSelected.MainPage &&
+              "cursor-pointer items-center ease-in-out duration-500 hover:scale-110 hover:brightness-150"
+          )}
+        >
           <ReactIcon
-            classname={twMerge(
-              "fill-lightblue transition-all ease-in-out duration-500",
-              props.switchMode && "fill-black"
-            )}
+            classname={twMerge("fill-lightblue transition-all ease-in-out duration-500", theme && "fill-black")}
             width={30}
             height={30}
-            stroke={props.switchMode ? "white" : "black"}
+            stroke={theme ? "white" : "black"}
           />
-          <h1>Welcome!</h1>
-        </div>
+          <h1>{props.page === PageSelected.MainPage ? "Welcome!" : "Home Page"}</h1>
+        </Link>
         <div className="flex gap-4">
           <div
             className={twMerge(
@@ -39,7 +46,7 @@ export default function Navbar(props: PropsNavbarInterface) {
             onClick={() => window.open("https://www.linkedin.com/in/jvbo/", "_blank", "noopener, noreferrer")}
           >
             <LinkedinIcon
-              classname={twMerge("fill-lightblue ease-in-out duration-500", props.switchMode && "fill-black")}
+              classname={twMerge("fill-lightblue ease-in-out duration-500", theme && "fill-black")}
               width={31}
               height={31}
             />
@@ -53,26 +60,29 @@ export default function Navbar(props: PropsNavbarInterface) {
             onClick={() => window.open("https://github.com/JVPhoenix", "_blank", "noopener, noreferrer")}
           >
             <GitHubIcon
-              classname={twMerge("fill-lightblue ease-in-out duration-500", props.switchMode && "fill-black")}
+              classname={twMerge("fill-lightblue ease-in-out duration-500", theme && "fill-black")}
               width={30}
               height={30}
             />
             <h1>GitHub</h1>
           </div>
-          <div
-            className={twMerge(
-              "flex gap-1 whitespace-nowrap select-none cursor-pointer items-center",
-              "ease-in-out duration-500 hover:scale-110 hover:brightness-150"
-            )}
-          >
-            <EmailIcon
-              classname={twMerge("fill-lightblue ease-in-out duration-500", props.switchMode && "fill-black")}
-              width={31}
-              height={31}
-              stroke={props.switchMode ? "white" : "black"}
-            />
-            <h1>Contacts</h1>
-          </div>
+          {props.page === PageSelected.MainPage && (
+            <Link
+              href="contacts"
+              className={twMerge(
+                "flex gap-1 whitespace-nowrap select-none cursor-pointer items-center",
+                "ease-in-out duration-500 hover:scale-110 hover:brightness-150"
+              )}
+            >
+              <EmailIcon
+                classname={twMerge("fill-lightblue ease-in-out duration-500", theme && "fill-black")}
+                width={31}
+                height={31}
+                stroke={theme ? "white" : "black"}
+              />
+              <h1>Contacts</h1>
+            </Link>
+          )}
         </div>
         <div className="flex gap-1 select-none items-center">
           <h1>Light</h1>
@@ -102,8 +112,8 @@ export default function Navbar(props: PropsNavbarInterface) {
               "dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
             )}
             type="checkbox"
-            defaultChecked={true}
-            onChange={() => props.setSwitchMode((prevmode) => !prevmode)}
+            defaultChecked={!theme}
+            onChange={() => setTheme((prevmode) => !prevmode)}
           />
           <h1>Dark</h1>
         </div>

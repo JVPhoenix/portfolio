@@ -13,12 +13,10 @@ import {
   VegasIcon,
 } from "./icons";
 import Image from "next/image";
+import { useTheme } from "@/context/theme";
 
-interface ExperiencePropsInterface {
-  switchMode: boolean;
-}
-
-export default function Experience(props: ExperiencePropsInterface) {
+export default function Experience() {
+  const {theme} = useTheme();
   return (
     <div className="flex flex-col gap-2 h-full m-auto">
       <h1 className="text-4xl font-bold text-center whitespace-nowrap">Professional Experience</h1>
@@ -28,7 +26,7 @@ export default function Experience(props: ExperiencePropsInterface) {
         className={twMerge(
           "flex gap-2 h-[240px] items-center justify-center rounded-2xl bg-slate-700 p-2",
           "ease-in-out duration-500",
-          props.switchMode && "bg-slate-200"
+          theme && "bg-slate-200"
         )}
       >
         <Image
@@ -39,7 +37,7 @@ export default function Experience(props: ExperiencePropsInterface) {
           className={twMerge(
             "cursor-pointer rounded-xl hover:border-4 hover:scale-105 hover:border-slate-700",
             "ease-in-out duration-500",
-            props.switchMode && "hover:border-slate-200"
+            theme && "hover:border-slate-200"
           )}
         />
         <Image
@@ -50,7 +48,7 @@ export default function Experience(props: ExperiencePropsInterface) {
           className={twMerge(
             "cursor-pointer rounded-xl hover:border-4 hover:scale-105 hover:border-slate-700",
             "ease-in-out duration-500",
-            props.switchMode && "hover:border-slate-200"
+            theme && "hover:border-slate-200"
           )}
         />
       </div>
@@ -60,7 +58,7 @@ export default function Experience(props: ExperiencePropsInterface) {
           className={twMerge(
             "flex flex-col gap-1 bg-slate-700 p-2 my-2 rounded-2xl text-center",
             "ease-in-out duration-500",
-            props.switchMode && "bg-slate-200"
+            theme && "bg-slate-200"
           )}
         >
           <h1>I have knowledge in the following techs:</h1>
@@ -90,7 +88,7 @@ export default function Experience(props: ExperiencePropsInterface) {
             className={twMerge(
               "flex flex-col gap-1 bg-slate-700 p-2 my-2 rounded-2xl text-center items-center",
               "ease-in-out duration-500 w-fit",
-              props.switchMode && "bg-slate-200"
+              theme && "bg-slate-200"
             )}
           >
             <h1>I have knowledge in the following editing softwares:</h1>
