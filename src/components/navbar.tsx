@@ -29,7 +29,7 @@ export default function Navbar(props: PropsNavbarInterface) {
       className={twMerge(
         "flex bg-black2 lg:justify-center px-5 w-full h-14",
         "text-lightblue items-center font-bold text-lg shadow-lg",
-        theme && "bg-transparent text-black"
+        theme && "bg-white text-black"
       )}
     >
       <div className="flex lg:hidden select-none" onClick={() => setOpenMenu((prevState) => !prevState)}>
@@ -48,7 +48,7 @@ export default function Navbar(props: PropsNavbarInterface) {
           "w-full justify-between hidden lg:flex",
           !openMenu ? "animate-showdown" : "animate-[fadein_0.5s_linear]",
           openMenu && "flex flex-col absolute w-fit translate-y-28 -translate-x-2 rounded-xl bg-black2 p-2 gap-1",
-          openMenu && theme && "bg-transparent shadow-lg"
+          openMenu && theme && "bg-white shadow-lg"
         )}
       >
         <Link

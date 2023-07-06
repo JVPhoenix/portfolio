@@ -27,7 +27,7 @@ export default function Home() {
         <Navbar page={PageSelected.MainPage} />
         <div
           className={twMerge(
-            "flex flex-col m-auto max-w-[825px] text-white1 items-center align-middle gap-10 mt-5",
+            "flex flex-col m-auto lg:max-w-[825px] text-white1 items-center align-middle gap-10 mt-5",
             "animate-fadein",
             theme && "text-black"
           )}

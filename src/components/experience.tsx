@@ -18,16 +18,16 @@ import { useTheme } from "@/context/theme";
 export default function Experience() {
   const { theme } = useTheme();
   return (
-    <div className="flex flex-col w-[430px] lg:w-full gap-2 items-center">
-      <h1 className="text-4xl font-bold">Professional Experience</h1>
-      <div className="flex flex-col gap-1 w-full">
+    <div className="flex flex-col w-[380px] lg:w-full gap-2 items-center justify-center">
+      <h1 className="text-3xl lg:text-4xl font-bold">Professional Experience</h1>
+      <div className="flex flex-col gap-1">
         <h1 className="font-bold text-xl">DEVELOPER</h1>
         <p>Below you can see a preview of all the projects i made, and you can click to see the live result!</p>
         <div
           className={twMerge(
             "flex flex-col lg:flex-row gap-2 items-center justify-center rounded-2xl bg-slate-700 p-2",
             "ease-in-out duration-500",
-            "w-[430px] h-full lg:h-[240px] lg:w-full",
+            "w-[380px] h-full lg:h-[240px] lg:w-full",
             theme && "bg-slate-200"
           )}
         >
@@ -38,7 +38,7 @@ export default function Experience() {
             height={0}
             className={twMerge(
               "cursor-pointer rounded-xl hover:border-4 hover:scale-105 hover:border-slate-700",
-              "ease-in-out duration-500 w-[430px] lg:w-[400px]",
+              "ease-in-out duration-500 w-[380px] lg:w-[400px]",
               theme && "hover:border-slate-200"
             )}
           />
@@ -49,7 +49,7 @@ export default function Experience() {
             height={0}
             className={twMerge(
               "cursor-pointer rounded-xl hover:border-4 hover:scale-105 hover:border-slate-700",
-              "ease-in-out duration-500 w-[430px] lg:w-[400px]",
+              "ease-in-out duration-500 w-[380px] lg:w-[400px]",
               theme && "hover:border-slate-200"
             )}
           />
@@ -60,7 +60,7 @@ export default function Experience() {
         <div
           className={twMerge(
             "flex flex-col gap-1 bg-slate-700 p-2 my-2 rounded-2xl text-center",
-            "ease-in-out duration-500 w-[430px] lg:w-full",
+            "ease-in-out duration-500 w-[380px] lg:w-full",
             theme && "bg-slate-200"
           )}
         >
@@ -81,7 +81,7 @@ export default function Experience() {
       <div className="flex flex-col gap-2">
         <h1 className="font-bold text-xl">OTHER JOBS</h1>
         <h1 className="font-bold">Graphic Designer</h1>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center text-justify">
           <p className="indent-8">
             Started as a Graphic Designer in a local print shop for a year, making new ideas and concepts using Adobe
             Photoshop. Later, worked as a freelancer designer, and editing videos in Vegas Pro, always focusing on the
@@ -95,7 +95,7 @@ export default function Experience() {
             )}
           >
             <h1>I have knowledge in the following editing softwares:</h1>
-            <div className="flex gap-2">
+            <div className="flex gap-2 w-[370px] items-center justify-center">
               <PhotoshopIcon width={60} height={60} classname="fill-[#0c0824]" />
               <VegasIcon width={60} height={60} classname="stroke-[#1195cf]" />
               <FigmaIcon width={58} height={58} classname="fill-slate-200" />
@@ -103,12 +103,12 @@ export default function Experience() {
           </div>
         </div>
         <h1 className="font-bold">Chemistry Related</h1>
-        <p className="indent-8">
+        <p className="indent-8 text-justify">
           In my College Degree, i made 4 internships as a teacher, and worked as a researcher in the laboratory of
           Biology of my campus, in some health areas, for example, water and soil analysis, and interactions and effects
           of pesticides in humans and other living beings.
         </p>
-        <p className=" indent-8">
+        <p className=" indent-8 text-justify">
           Also, i'm working as a Water Resources Coordinator for my city's secretary of environment, in the chemistry
           area, focused on the control and analysis of water sources.
         </p>
