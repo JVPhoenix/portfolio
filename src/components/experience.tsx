@@ -16,48 +16,51 @@ import Image from "next/image";
 import { useTheme } from "@/context/theme";
 
 export default function Experience() {
-  const {theme} = useTheme();
+  const { theme } = useTheme();
   return (
-    <div className="flex flex-col gap-2 h-full m-auto">
-      <h1 className="text-4xl font-bold text-center whitespace-nowrap">Professional Experience</h1>
-      <h1 className="font-bold text-xl">DEVELOPER</h1>
-      <p>Below you can see a preview of all the projects i made, and you can click to see the live result!</p>
-      <div
-        className={twMerge(
-          "flex gap-2 h-[240px] items-center justify-center rounded-2xl bg-slate-700 p-2",
-          "ease-in-out duration-500",
-          theme && "bg-slate-200"
-        )}
-      >
-        <Image
-          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhzN3JvcDNuY2doMjNqczllMHl4YzBxOWNwMXI3eGdlcjYya3k4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x39Aba7wrHh3IqRvZZ/giphy.gif"
-          alt="First project gif"
-          width={400}
-          height={0}
+    <div className="flex flex-col w-[430px] lg:w-full gap-2 items-center">
+      <h1 className="text-4xl font-bold">Professional Experience</h1>
+      <div className="flex flex-col gap-1 w-full">
+        <h1 className="font-bold text-xl">DEVELOPER</h1>
+        <p>Below you can see a preview of all the projects i made, and you can click to see the live result!</p>
+        <div
           className={twMerge(
-            "cursor-pointer rounded-xl hover:border-4 hover:scale-105 hover:border-slate-700",
+            "flex flex-col lg:flex-row gap-2 items-center justify-center rounded-2xl bg-slate-700 p-2",
             "ease-in-out duration-500",
-            theme && "hover:border-slate-200"
+            "w-[430px] h-full lg:h-[240px] lg:w-full",
+            theme && "bg-slate-200"
           )}
-        />
-        <Image
-          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhzN3JvcDNuY2doMjNqczllMHl4YzBxOWNwMXI3eGdlcjYya3k4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x39Aba7wrHh3IqRvZZ/giphy.gif"
-          alt="Second project gif"
-          width={400}
-          height={0}
-          className={twMerge(
-            "cursor-pointer rounded-xl hover:border-4 hover:scale-105 hover:border-slate-700",
-            "ease-in-out duration-500",
-            theme && "hover:border-slate-200"
-          )}
-        />
+        >
+          <Image
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhzN3JvcDNuY2doMjNqczllMHl4YzBxOWNwMXI3eGdlcjYya3k4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x39Aba7wrHh3IqRvZZ/giphy.gif"
+            alt="First project gif"
+            width={400}
+            height={0}
+            className={twMerge(
+              "cursor-pointer rounded-xl hover:border-4 hover:scale-105 hover:border-slate-700",
+              "ease-in-out duration-500 w-[430px] lg:w-[400px]",
+              theme && "hover:border-slate-200"
+            )}
+          />
+          <Image
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhzN3JvcDNuY2doMjNqczllMHl4YzBxOWNwMXI3eGdlcjYya3k4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x39Aba7wrHh3IqRvZZ/giphy.gif"
+            alt="Second project gif"
+            width={400}
+            height={0}
+            className={twMerge(
+              "cursor-pointer rounded-xl hover:border-4 hover:scale-105 hover:border-slate-700",
+              "ease-in-out duration-500 w-[430px] lg:w-[400px]",
+              theme && "hover:border-slate-200"
+            )}
+          />
+        </div>
       </div>
       <div className="flex flex-col items-center">
         <p>Also, the codes are available in my GitHub, with all the commits.</p>
         <div
           className={twMerge(
             "flex flex-col gap-1 bg-slate-700 p-2 my-2 rounded-2xl text-center",
-            "ease-in-out duration-500",
+            "ease-in-out duration-500 w-[430px] lg:w-full",
             theme && "bg-slate-200"
           )}
         >

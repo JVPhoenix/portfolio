@@ -1,32 +1,62 @@
 import { twMerge } from "tailwind-merge";
-import { EmailIcon, GitHubIcon, LinkedinIcon, ReactIcon } from "./icons";
-import { Dispatch, SetStateAction } from "react";
+import { EmailIcon, GitHubIcon, LinkedinIcon, MenuIcon, ReactIcon } from "./icons";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "@/context/theme";
 import { PageSelected } from "@/types";
 
 interface PropsNavbarInterface {
-  className?: string;
   page?: number;
 }
 
 export default function Navbar(props: PropsNavbarInterface) {
   const { theme, setTheme } = useTheme();
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+    function handleReSize() {
+      if (window.innerWidth >= 1024) {
+        setOpenMenu(false);
+      }
+    }
+    window.addEventListener("resize", handleReSize);
+    handleReSize();
+    return () => window.removeEventListener("resize", handleReSize);
+  }, []);
+
   return (
     <div
       className={twMerge(
-        "flex bg-black2 justify-center px-5 w-full h-14",
+        "flex bg-black2 lg:justify-center px-5 w-full h-14",
         "text-lightblue items-center font-bold text-lg shadow-lg",
         theme && "bg-transparent text-black"
       )}
     >
-      <div className={twMerge("flex w-full justify-between", props.className)}>
+      <div className="flex lg:hidden select-none" onClick={() => setOpenMenu((prevState) => !prevState)}>
+        <MenuIcon
+          width={30}
+          height={30}
+          classname={twMerge(
+            "fill-black2 rounded-full bg-lightblue",
+            "cursor-pointer items-center ease-in-out duration-500 hover:scale-[120%] hover:brightness-150",
+            theme && "fill-white bg-black"
+          )}
+        />
+      </div>
+      <div
+        className={twMerge(
+          "w-full justify-between hidden lg:flex",
+          !openMenu ? "animate-showdown" : "animate-[fadein_0.5s_linear]",
+          openMenu && "flex flex-col absolute w-fit translate-y-28 -translate-x-2 rounded-xl bg-black2 p-2 gap-1",
+          openMenu && theme && "bg-transparent shadow-lg"
+        )}
+      >
         <Link
           href="/"
           className={twMerge(
             "flex gap-1 whitespace-nowrap select-none cursor-default",
             props.page !== PageSelected.MainPage &&
-              "cursor-pointer items-center ease-in-out duration-500 hover:scale-110 hover:brightness-150"
+              "cursor-pointer items-center ease-in-out duration-500 hover:scale-[110%] hover:brightness-150"
           )}
         >
           <ReactIcon
@@ -37,11 +67,11 @@ export default function Navbar(props: PropsNavbarInterface) {
           />
           <h1>{props.page === PageSelected.MainPage ? "Welcome!" : "Home Page"}</h1>
         </Link>
-        <div className="flex gap-4">
+        <div className="flex flex-col gap-1 lg:flex-row lg:gap-4">
           <div
             className={twMerge(
               "flex gap-1 whitespace-nowrap select-none cursor-pointer items-center",
-              "ease-in-out duration-500 hover:scale-110 hover:brightness-150"
+              "ease-in-out duration-500 hover:scale-[110%] hover:brightness-150"
             )}
             onClick={() => window.open("https://www.linkedin.com/in/jvbo/", "_blank", "noopener, noreferrer")}
           >
@@ -55,7 +85,7 @@ export default function Navbar(props: PropsNavbarInterface) {
           <div
             className={twMerge(
               "flex gap-1 whitespace-nowrap select-none cursor-pointer items-center",
-              "ease-in-out duration-500 hover:scale-110 hover:brightness-150"
+              "ease-in-out duration-500 hover:scale-[110%] hover:brightness-150"
             )}
             onClick={() => window.open("https://github.com/JVPhoenix", "_blank", "noopener, noreferrer")}
           >
@@ -71,7 +101,7 @@ export default function Navbar(props: PropsNavbarInterface) {
               href="contacts"
               className={twMerge(
                 "flex gap-1 whitespace-nowrap select-none cursor-pointer items-center",
-                "ease-in-out duration-500 hover:scale-110 hover:brightness-150"
+                "ease-in-out duration-500 hover:scale-[110%] hover:brightness-150"
               )}
             >
               <EmailIcon

@@ -24,7 +24,7 @@ export default function Home() {
           inter.className
         )}
       >
-        <Navbar className="animate-showdown" page={PageSelected.MainPage} />
+        <Navbar page={PageSelected.MainPage} />
         <div
           className={twMerge(
             "flex flex-col m-auto max-w-[825px] text-white1 items-center align-middle gap-10 mt-5",

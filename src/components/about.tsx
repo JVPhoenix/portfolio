@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col gap-2 min-h-[350px]">
+    <div className="flex flex-col gap-2 w-full min-h-[350px] items-center ">
       <h1 className="text-4xl font-bold text-center">About-me</h1>
-      <div className="flex gap-5">
+      <div className="flex flex-col lg:flex-row gap-5">
         <div className="flex gap-2 max-h-[300px]">
           <Image
             className="rounded-md"
@@ -21,7 +21,7 @@ export default function About() {
             height={0}
           />
         </div>
-        <div className="flex flex-col gap-3 w-[400px] text-justify indent-8">
+        <div className="flex flex-col gap-3 w-[430px] text-justify indent-8">
           <p>Hello! I'm João Vitor, or JV, and i'm a lover of technologies, innovations and programming.</p>
           <p>
             I started in the area with the assembly and maintenance of computers and later with graphic design, always
