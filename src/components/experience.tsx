@@ -43,7 +43,7 @@ export default function Experience() {
             )}
           />
           <Image
-            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhzN3JvcDNuY2doMjNqczllMHl4YzBxOWNwMXI3eGdlcjYya3k4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x39Aba7wrHh3IqRvZZ/giphy.gif"
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWRjbDJqN3Jicm84d3B2bGc1OGVpdDdzdTQ5NHdsMG9hYWNiZnk5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/egksMkWhwkHzXEiFJm/giphy.gif"
             alt="Second project gif"
             width={400}
             height={0}
