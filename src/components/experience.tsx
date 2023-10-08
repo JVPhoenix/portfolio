@@ -32,7 +32,7 @@ export default function Experience() {
           )}
         >
           <Image
-            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhzN3JvcDNuY2doMjNqczllMHl4YzBxOWNwMXI3eGdlcjYya3k4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x39Aba7wrHh3IqRvZZ/giphy.gif"
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhzN3JvcDNuY2doMjNqczllMHl4YzBxOWNwMXI3eGdlcjYya3k4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x39Aba7wrHh3IqRvZZ/giphy.gif"
             alt="First project gif"
             width={400}
             height={0}
@@ -41,9 +41,10 @@ export default function Experience() {
               "ease-in-out duration-500 w-[380px] lg:w-[400px]",
               theme && "hover:border-slate-200"
             )}
+            onClick={() => window.open("https://loteamentormartins.netlify.app/", "_blank", "noopener, noreferrer")}
           />
           <Image
-            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWRjbDJqN3Jicm84d3B2bGc1OGVpdDdzdTQ5NHdsMG9hYWNiZnk5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/egksMkWhwkHzXEiFJm/giphy.gif"
+            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWRjbDJqN3Jicm84d3B2bGc1OGVpdDdzdTQ5NHdsMG9hYWNiZnk5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/egksMkWhwkHzXEiFJm/giphy.gif"
             alt="Second project gif"
             width={400}
             height={0}
@@ -52,6 +53,7 @@ export default function Experience() {
               "ease-in-out duration-500 w-[380px] lg:w-[400px]",
               theme && "hover:border-slate-200"
             )}
+            onClick={() => window.open("https://dota2app.netlify.app/", "_blank", "noopener, noreferrer")}
           />
         </div>
       </div>
