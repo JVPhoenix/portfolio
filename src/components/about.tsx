@@ -1,4 +1,6 @@
 import Image from "next/image";
+import profilePic01 from "../../public/profilePic_01.jpg";
+import profilePic02 from "../../public/profilePic_02.jpg";
 
 export default function About() {
   return (
@@ -9,14 +11,14 @@ export default function About() {
           <Image
             className="rounded-md w-[185px] lg:w-[200px]"
             alt="Page owner pic"
-            src="https://i.imgur.com/bmIIQLW.jpg"
+            src={profilePic01}
             width={200}
             height={0}
           />
           <Image
             className="rounded-md w-[185px] lg:w-[200px]"
             alt="Page owner pic"
-            src="https://i.imgur.com/suMfNgu.jpg"
+            src={profilePic02}
             width={200}
             height={0}
           />

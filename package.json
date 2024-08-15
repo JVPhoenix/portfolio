@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -22,5 +22,9 @@
     "tailwind-merge": "^1.13.2",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
-  }
+  },
+  "description": "This is my portfólio, and contains some things about me and about the jobs and experiences i have.\r On the site, you can see some other sites i created and the techs i have knowledge!!",
+  "main": "next.config.js",
+  "author": "",
+  "license": "ISC"
 }
